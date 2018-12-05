@@ -1,6 +1,7 @@
 #include "stack.h"
 #include <string.h>
 
+#include <stdio.h>
 void	ft_sa(t_stack *stack)
 {
 	int	tmp;
@@ -35,7 +36,7 @@ void	ft_pa(t_stack *stack)
 {
 	if (stack == NULL)
 		return ;
-	if (stack->top)
+	if (stack->top != -1)
 		stack->top--;
 }
 
@@ -43,6 +44,6 @@ void	ft_pb(t_stack *stack)
 {
 	if (stack == NULL)
 		return ;
-	if (stack->high - stack->top)
+	if (stack->high == stack->top)
 		stack->top++;
 }

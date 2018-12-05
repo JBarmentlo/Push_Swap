@@ -26,36 +26,32 @@ t_stack	*new_stack(char	**av, int argc)
 	return (out);
 }
 
-void	print_stack(t_stack *stack)
+void 	print_stack(t_stack *stack)
 {
-	int	i;
-	int	j;
+	int	a;
+	int	b;
+	int k;
 
 	if (stack == NULL)
 		return ;
-	i = stack->top;
-
-	j = stack->high - stack->top - 1;
+	a = stack->top;
+	b = stack->high - stack->top - 1;
+	k = stack->high;
 	ft_putstr("A\tB\n\n");
-	while (i > j)
+	k++;
+	while(k--)
 	{
-		ft_putnbr(stack->array[i]);
-		ft_putchar('\n');
-		i--;
-	}
-	while (j > i)
-	{
-		ft_putnbr(stack->array[stack->high - j]);
-		ft_putchar('\n');
-		j--;
-	}
-	while (i != -1)
-	{
-		ft_putnbr(stack->array[i]);
+		if (k == a)
+		{
+			ft_putnbr(stack->array[a]);
+			a--;
+		}
 		ft_putchar('\t');
-		ft_putnbr(stack->array[stack->high - j]);
+		if (k == b)
+		{
+			ft_putnbr(stack->array[stack->high - b]);
+			b--;
+		}
 		ft_putchar('\n');
-		i--;
-		j--;
 	}
 }
