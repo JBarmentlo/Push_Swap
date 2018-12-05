@@ -1,8 +1,13 @@
-#include "(*stack).h"
+#include "stack.h"
 #include "libft.h"
 #include <stdio.h>
 
-void sort_step(t_stack *(*stack))
+int		is_sorted(t_stack *stack)
+{
+	return (1);
+}
+
+void sort_step(t_stack **stack)
 {
 	if ((*stack)->array[(*stack)->top] < (*stack)->array[(*stack)->top - 1])
 		ft_sa((*stack));

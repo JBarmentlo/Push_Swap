@@ -17,3 +17,4 @@ void	ft_rra(t_stack *stack);
 void	ft_rb(t_stack *stack);
 void	ft_rrb(t_stack *stack);
 void	print_stack(t_stack *stack);
+void sort_step(t_stack **stack);
