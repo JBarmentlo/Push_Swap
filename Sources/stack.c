@@ -55,3 +55,44 @@ void 	print_stack(t_stack *stack)
 		ft_putchar('\n');
 	}
 }
+
+int		is_sorted(t_stack *stack)
+{
+	int 	i;
+	if (stack == NULL)
+		return (-1);
+	if (stack->top != stack->high)
+		return (0);
+	i = 1;
+	while (i <= stack->high)
+	{
+		if (stack->array[i] > stack->array[i - 1] )
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
+int		score(t_stack *stack)
+{
+	int	i;
+	int	j;
+	int cmp;
+	int	score;
+
+	i = 0;
+	score = 0;
+	while (i < stack->high)
+	{
+		j = i + 1;
+		cmp = stack->array[i];
+		while (j <= stack->high)
+		{
+			if (stack->array[j] > stack->array[i])
+				score++;
+			j++;
+		}
+		i++;
+	}
+	return (score);
+}

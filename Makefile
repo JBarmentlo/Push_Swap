@@ -1,5 +1,5 @@
 NAME=Push_Swap
-SOURCES=stack.c push_swap.c rotations.c operations.c main.c
+SOURCES=stack.c push_swap.c rotations.c operations.c main.c blackops.c stacklist.c display.c
 OBJ_FOLDER=out
 OUT=$(addprefix $(OBJ_FOLDER)/,$(SOURCES:.c=.o))
 CFLAGS=-Wall -Werror -Wextra

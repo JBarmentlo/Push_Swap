@@ -44,6 +44,6 @@ void	ft_pb(t_stack *stack)
 {
 	if (stack == NULL)
 		return ;
-	if (stack->high == stack->top)
+	if (stack->high != stack->top)
 		stack->top++;
 }
